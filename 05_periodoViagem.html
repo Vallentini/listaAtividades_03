@@ -11,8 +11,26 @@
     */
 
     // Entrada
-    
+    const distancia = Number(prompt("Informe a distância da viagem em km.").trim().replace(",","."));
+    const dia = Number(prompt("Informe quantos km pretende viajar por dia.").trim().replace(",","."));
     // Processamento
+    const calculo = distancia / dia;
+    if(isNaN(distancia) || isNaN(dia)){
+        document.write('Informe um valor válido.');
+    }
+    else if(calculo < 4){
+        document.write('Sua viagem poderá ser realizada em qualquer período.');
+    }
+    else if(calculo > 3 && calculo < 11){
+        document.write('Sua viagem poderá ser realizada nas férias de julho');
+    }
+    else if(calculo > 10 && calculo < 21){
+        document.write('Sua viagem poderá ser realizada nas férias de verão.');
+    }
+    else if(calculo > 20){
+        document.write('A melhor opção é você trabalhar remotamente.');
+    }
+
 
     // Saída
 

@@ -10,8 +10,22 @@
     */
 
     // Entrada
-    
+    const valor = Number(prompt("Informe o valor do imóvel.").trim().replace(",","."));
+    const financiamento = Number(prompt("Informe em quantos anos foi feito o financiamento.").trim());
+    const salario = Number(prompt("Informe o valor do seu salário.").trim().replace(",","."));
     // Processamento
+    const calculo = valor / financiamento;
+    const calculo2 = calculo / 12;
+    const porcentagem = salario * 0.3
+    if(isNaN(valor) || isNaN(financiamento) || isNaN(salario)){
+        document.write('Insira um valor válido.')
+    }
+    else if(porcentagem >= calculo2){
+        document.write(`Seu financiamneto foi condedido o valor ficará de ${calculo2.toFixed(2).replace(".",",")} reais.`);
+    }
+    else if(porcentagem < calculo2){
+        document.write(`Seu financiamento foi negado o valor da parcela ficará ${calculo2.toFixed(2).replace(".",",")} reais.`);
+    }
 
     // Saída
 

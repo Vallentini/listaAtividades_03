@@ -22,19 +22,19 @@
     }
     else if(salario <= 2000){
         const conta = salario * 0.15;
-        document.write(`O reajuste será de ${conta} reais, e seu novo salário ficará ${(salario + conta)} reais.`);
+        document.write(`O reajuste será de ${conta.toFixed(2).replace(".",",")} reais, e seu novo salário ficará ${(salario + conta).toFixed(2).replace(".",",")} reais.`);
     }
     else if(salario > 2000 && salario < 4000){
         const conta1 = salario * 0.1;
-        document.write(`O reajuste será de ${conta1} reais, e seu novo salário ficará ${(salario + conta1)} reais.`);
+        document.write(`O reajuste será de ${conta1.toFixed(2).replace(".",",")} reais, e seu novo salário ficará ${(salario + conta1).toFixed(2).replace(".",",")} reais.`);
     } 
     else if(salario > 4000 && salario < 7001){
         const conta2 = salario * 0.075;
-        document.write(`O reajuste será de ${conta2} reais, e seu novo salário ficará ${(salario + conta2)} reais.`);
+        document.write(`O reajuste será de ${conta2.toFixed(2).replace(".",",")} reais, e seu novo salário ficará ${(salario + conta2).toFixed(2).replace(".",",")} reais.`);
     }
-    else if(salario > 7000){
+    else if(salario >= 7001){
         const conta3 = salario * 0.05;
-        document.write(`O reajuste será de ${conta3} reais, e seu novo salário ficará ${(salario + conta3)} reais.`);
+        document.write(`O reajuste será de ${conta3.toFixed(2).replace(".",",")} reais, e seu novo salário ficará ${(salario + conta3).toFixed(2).replace(".",",")} reais.`);
     }
     // Saída
 

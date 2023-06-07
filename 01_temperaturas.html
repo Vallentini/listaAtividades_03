@@ -10,8 +10,27 @@
     */
 
     // Entrada
-    
+    const temp = prompt("Informe a temperatura.").trim().replace(",",".");
+
     // Processamento
+    if (isNaN(temp)){
+        alert('Informe a temperatura em números reais.');
+    }
+    else if(temp < 100){
+        document.write('A temperatura está muito baixa.');
+    }
+    else if(temp > 100 && temp <= 200){
+         document.write('A temperatura está baixa.');
+    }
+    else if(temp > 200 && temp < 500){
+        document.write('A temperatura está normal.');
+    }
+    else if(temp > 500){
+        document.write('A temperatura está muito alta.');
+    }
+    else{
+        alert('Resposta inválida.');
+    }
 
     // Saída
 

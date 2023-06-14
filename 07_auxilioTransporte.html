@@ -12,8 +12,20 @@
     */
 
     // Entrada
-    
+    let salario = Number(prompt("Quanto você recebe de salário?").trim().replace(",","."));
+    const auxilio = prompt("Deseja receber auxílio transporte? (Responda com sim ou não).").trim().toLocaleLowerCase();
+    const transporte = prompt("Utiliza transporte púplico ou própio? (Responda com público ou própio).").trim().toLocaleLowerCase();
     // Processamento
+    if(isNaN(salario)){
+        alert('Informe um valor válido!');
+    }
+    else if(auxilio == "sim" && transporte == "própio"){
+        salario = salario * 0.06
+        document.write(`o deconto será de ${salario} e o salário final será ${(salario + 200).toFixed(2).replace(".",",")}`)
+    }
+    else if(auxilio == "sim" && transporte == "público"){
+        document.write(`Não haverá desconto e o salário final será ${(salario + 150).toFixed(2).replace(".",",")}`)
+    }
 
     // Saída
 

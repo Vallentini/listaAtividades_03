@@ -19,9 +19,29 @@
     */
 
     // Entrada
-    
+    const carreira = prompt("Quantos anos de carreira possui?").trim();
+    const pesquisa = prompt("Qual a quantidade de Projetos de Pesquisa que já coordenou?").trim();
+    const extensao = prompt("Qual a quantidade de Projetos de Extensão que orientou").trim();
+    const tcc = prompt("Qual a quantidade de TCCs que já orientou?").trim();
     // Processamento
 
+    const carreira2 = carreira * 2.5;
+    const pesquisa2 = pesquisa * 5;
+    const extensao2 = extensao * 5;
+    const tcc2 = tcc * 3;
+    const pontos = (carreira2 + pesquisa2 + extensao2 + tcc2);
+    if (pontos < 31){
+        document.write('Você é considerado convidado.');
+    }
+    else if(pontos > 30 && pontos < 51){
+        document.write('Você é considerado agregado.');
+    }
+    else if(pontos > 50){
+        document.write('Você é considerado titular.');
+    }
+    else{
+        alert("Informe o valor do ano usando 4 digitos.");
+    }
     // Saída
 
 </script>

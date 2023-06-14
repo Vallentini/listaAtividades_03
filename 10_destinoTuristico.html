@@ -12,9 +12,23 @@
     */
 
     // Entrada
-    
+    const rio = Number(prompt("Informe o valor do transporte aéreo para o Rio de Janeiro.").trim().replace(",","."));
+    const paulo = Number(prompt("Informe o valor do transporte aéreo para o São Paulo.").trim().replace(",","."));
+    const hotelrio = Number(prompt("Informe o preço da diária do hotel no Rio de Janeiro.").trim().replace(",","."));
+    const hotelsão = Number(prompt("Informe o preço da diária do hotel no São Paulo.").trim().replace(",","."));
+    const dias = Number(prompt("Quantos dias pretende viajar?").trim());
     // Processamento
-
+    const conta = rio + (hotelrio * dias);
+    const conta2 = paulo + (hotelsão * dias);
+    if(conta < conta2){
+        document.write(`Sua viagem vai ser para o Rio de Janeiro com o custo de ${conta.toFixed(2).replace(".",",")}`);
+    }
+    else if(conta > conta2){
+        document.write(`Sua viagem vai ser para o São Paulo com o custo de ${conta2.toFixed(2).replace(".",",")}`);
+    }
+    else{
+        alert('Valor inválido!');
+    }
     // Saída
 
 </script>

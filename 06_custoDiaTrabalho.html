@@ -20,7 +20,7 @@
     const diaria = 100;
     // Processamento
     if(isNaN(viagem)){
-        alert("Valor inválido.");
+        document.write("Valor inválido.");
     }
     else if(cargo == "motorista" && viagem < 11 && viagem > 0){   
         document.write(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${(diaria + diaria * 0.2)}`);

@@ -17,7 +17,7 @@
     const transporte = prompt("Utiliza transporte púplico ou própio? (Responda com público ou própio).").trim().toLocaleLowerCase();
     // Processamento
     if(isNaN(salario)){
-        alert('Informe um valor válido!');
+        document.write('Informe um valor válido!');
     }
     else if(auxilio == "sim" && transporte == "própio"){
         salario = salario * 0.06

@@ -16,13 +16,13 @@
     const pagamento = prompt("Informe a forme de pagamento que o cliente irá utilizar. (Utilize B para boleto, D para dinheiro e P para pix.)").trim().toLocaleLowerCase();
     // Processamento
     if(pagamento == "b"){
-        document.write(`O valor final do pagamento será de ${(computador * 0.03).toFixed(2).replace(".",",")}.`);
+        document.write(`O valor final do pagamento será de ${(computador - (computador * 0.03)).toFixed(2).replace(".",",")}.`);
     }
     else if(pagamento == "d"){
-        document.write(`O valor final do pagamento será de ${(computador * 0.05).toFixed(2).replace(".",",")}.`);
+        document.write(`O valor final do pagamento será de ${(computador -( computador * 0.05)).toFixed(2).replace(".",",")}.`);
     }
     else if(pagamento == "p"){
-        document.write(`O valor final do pagamento será de ${(computador * 0.1).toFixed(2).replace(".",",")}`);
+        document.write(`O valor final do pagamento será de ${(computador - (computador * 0.1)).toFixed(2).replace(".",",")}`);
     }
     // Saída
 

@@ -26,9 +26,13 @@
     else if(conta > conta2){
         document.write(`Sua viagem vai ser para o São Paulo com o custo de ${conta2.toFixed(2).replace(".",",")}`);
     }
+    else if(conta == conta2){
+        document.write(`Sua viagem pode ser para São Paulo ou Rio de Janeiro com o custo de ${conta2.toFixed(2).replace(".",",")} para São Paulo e para o Rio de Janeiro.`);
+    }
     else{
         document.write('Valor inválido!');
     }
+    
     // Saída
 
 </script>

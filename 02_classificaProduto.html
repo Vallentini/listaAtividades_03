@@ -16,28 +16,28 @@
     const codigo = Number(prompt("Informe o código do produto com número de um a vinte.").trim());
     // Processamento
     if(isNaN(codigo)){
-        document.write('O código precisa ser um número.');
+        alert('O código precisa ser um número.');
     }
-    else if(codigo = 1){
-        document.write("Alimento não-perecível.");
+    else if(codigo == 1){
+        alert("Alimento não-perecível.");
     }
     else if(codigo > 1 && codigo < 5){
-        document.write('Alimento perecível.');
+        alert('Alimento perecível.');
     }
     else if(codigo > 4 && codigo < 7){
-        document.write('Vestuário.');
+        alert('Vestuário.');
     }
-    else if(codigo = 7){
-        document.write('Higiene pessoal.');
+    else if(codigo == 7){
+        alert('Higiene pessoal.');
     }
     else if(codigo > 7 && codigo < 16){
-        document.write('Limpeza e utensílos domésticos.');
+        alert('Limpeza e utensílos domésticos.');
     }
     else if(codigo > 15 && codigo < 21){
-        document.write('Outros.');
+        alert('Outros.');
     }
     else{
-        document.write('Código inválido.');
+        alert('Código inválido.');
     }
     // Saída
 

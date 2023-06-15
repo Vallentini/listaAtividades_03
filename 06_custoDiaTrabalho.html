@@ -20,19 +20,19 @@
     const diaria = 100;
     // Processamento
     if(isNaN(viagem)){
-        document.write("Valor inválido.");
+        alert("Valor inválido.");
     }
     else if(cargo == "motorista" && viagem < 11 && viagem > 0){   
-        document.write(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${(diaria + diaria * 0.2)}`);
+        alert(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${(diaria + diaria * 0.2)}`);
     }
     else if(cargo == "motorista" && viagem > 10){   
-        document.write(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${(diaria + diaria * 0.35)}`);
+        alert(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${(diaria + diaria * 0.35)}`);
     }
     else if(cargo == "cobrador" && viagem > 10){   
-        document.write(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${(diaria + diaria * 0.1)}`);
+        alert(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${(diaria + diaria * 0.1)}`);
     }
     else if(cargo == "cobrador" && viagem < 0){   
-        document.write(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${diaria}`);
+        alert(`Seu cargo é ${cargo}, e o valor final recebido pelas viagens é ${diaria}`);
     }
     
 
